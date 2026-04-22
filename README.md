@@ -2,16 +2,21 @@
 
 [Русская версия](README.ru.md)
 
-Generate PR review checklist items from changed-file risk signals.
+Generate review checklist from changed files and risk heuristics.
 
-## Quick start
+## Risk signals
+
+- migrations
+- auth/security changes
+- API changes
+- config/infrastructure changes
+- missing tests updates
+- missing docs updates
+
+## Usage
 
 ```bash
-# Read CLI help
-# (examples may differ by project)
+python3 main.py --changed-files ./changed-files.txt --format markdown
+python3 main.py --changed-files ./changed-files.txt --format json
+python3 main.py --changed-files ./changed-files.txt --output checklist.md
 ```
-
-## Documentation
-
-- See project files and workflow docs in this repository.
-- For Russian documentation, open `README.ru.md`.
