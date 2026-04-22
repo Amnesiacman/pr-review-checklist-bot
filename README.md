@@ -1,22 +1,25 @@
 # pr-review-checklist-bot
 
-Auto-generate PR checklist based on changed files and risk areas.
+`pr-review-checklist-bot` автоматически формирует чеклист ревью по измененным файлам.
 
-## MVP status
+## Что умеет v0.1
 
-- Basic CLI scaffold is ready (`main.py`).
-- Supports `--format text|json` and `--dry-run`.
-- Intended as a foundation for iterative feature work.
+- принимает список changed files (один путь на строку)
+- выявляет риск-зоны: миграции, auth/security, API, конфиги, отсутствие тестов/доков
+- генерирует чеклист в `markdown` или `json`
+- может записывать результат в файл (`--output`)
 
-## Quick start
+## Использование
 
 ```bash
-python3 main.py --help
-python3 main.py --format json --dry-run
+python3 -m pip install -e .
+pr-review-checklist-bot --changed-files ./changed-files.txt --format markdown
 ```
 
-## Next steps
+Пример `changed-files.txt`:
 
-1. Add domain-specific command set and config file support.
-2. Add tests and GitHub Actions workflow.
-3. Package and publish first tagged release.
+```text
+src/api/routes.py
+app/auth/service.py
+db/migrations/002_add_index.sql
+```
