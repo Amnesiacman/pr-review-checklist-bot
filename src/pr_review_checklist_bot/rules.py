@@ -88,4 +88,3 @@ def render_markdown(report: dict) -> str:
     for item in report["checklist"]:
         lines.append(f"- [ ] ({item['severity']}) {item['title']}")
     return "\n".join(lines)
-

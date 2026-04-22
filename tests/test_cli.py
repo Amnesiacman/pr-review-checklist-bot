@@ -20,4 +20,3 @@ def test_cli_output_file(tmp_path: Path):
     code = main(["--changed-files", str(changed), "--output", str(out)])
     assert code == 0
     assert out.exists()
-

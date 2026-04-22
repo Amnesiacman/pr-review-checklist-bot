@@ -10,7 +10,9 @@ def build_parser() -> argparse.ArgumentParser:
         prog="pr-review-checklist-bot",
         description="Generate PR review checklist from changed files",
     )
-    parser.add_argument("--changed-files", required=True, help="Path to newline-separated changed files")
+    parser.add_argument(
+        "--changed-files", required=True, help="Path to newline-separated changed files"
+    )
     parser.add_argument("--format", choices=("markdown", "json"), default="markdown")
     parser.add_argument("--output", help="Optional output file path")
     return parser
@@ -29,4 +31,3 @@ def main(argv=None) -> int:
         Path(args.output).write_text(text + "\n", encoding="utf-8")
     print(text)
     return 0
-

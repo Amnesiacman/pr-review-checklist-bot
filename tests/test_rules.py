@@ -15,4 +15,3 @@ def test_build_checklist_detects_high_risk():
     ids = {i["id"] for i in report["checklist"]}
     assert "security-review" in ids
     assert "db-migrations" in ids
-
