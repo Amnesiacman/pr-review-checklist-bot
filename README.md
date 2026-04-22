@@ -1,27 +1,17 @@
 # pr-review-checklist-bot
 
-![CI](https://github.com/Amnesiacman/pr-review-checklist-bot/actions/workflows/ci.yml/badge.svg)
+[Русская версия](README.ru.md)
 
-`pr-review-checklist-bot` автоматически формирует чеклист ревью по измененным файлам.
+Generate PR review checklist items from changed-file risk signals.
 
-## Что умеет v0.1
-
-- принимает список changed files (один путь на строку)
-- выявляет риск-зоны: миграции, auth/security, API, конфиги, отсутствие тестов/доков
-- генерирует чеклист в `markdown` или `json`
-- может записывать результат в файл (`--output`)
-
-## Использование
+## Quick start
 
 ```bash
-python3 -m pip install -e .
-pr-review-checklist-bot --changed-files ./changed-files.txt --format markdown
+# Read CLI help
+# (examples may differ by project)
 ```
 
-Пример `changed-files.txt`:
+## Documentation
 
-```text
-src/api/routes.py
-app/auth/service.py
-db/migrations/002_add_index.sql
-```
+- See project files and workflow docs in this repository.
+- For Russian documentation, open `README.ru.md`.
