@@ -1,5 +1,7 @@
 # pr-review-checklist-bot
 
+![CI](https://github.com/Amnesiacman/pr-review-checklist-bot/actions/workflows/ci.yml/badge.svg)
+
 `pr-review-checklist-bot` автоматически формирует чеклист ревью по измененным файлам.
 
 ## Что умеет v0.1
